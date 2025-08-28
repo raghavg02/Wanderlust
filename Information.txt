@@ -1,0 +1,22 @@
+// ---- Phase 1 (Part c) ---- //
+
+Form Validation : -
+    ~ When we enter data in the form, the browser and/or the web server will check to see that the data is in the correct format and within the constraints set by the application
+    ~ It of two types :
+        1. Client Side - the data which send from frontend to backend is correct or not.
+        2. Server Side - db (schema) / error handle
+
+// ---- for extra in error.ejs ---- //
+
+<!-- <div class="row mt-3">
+    <div class="alert alert-danger col-6 offset-3" role="alert">
+        <h4 class="alert-heading"><%= err.message %></h4>
+        <p><%=err.stack%></p>
+    </div>
+</div> -->
+
+
+// ---- Validation for Schema ---- //
+joi.dev -> Validate our Schema
+    - The most powerful schema description language and data validator for JavaScript.
+    - Server Side validation Schema
