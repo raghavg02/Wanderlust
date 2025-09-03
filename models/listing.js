@@ -14,8 +14,6 @@ const listingSchema = new Schema({
         },
         url: {
             type: String,
-            set: (v) => v === "" ? "https://images.unsplash.com/photo-1750440982726-d723eab666a5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" : v,
-            default: "https://images.unsplash.com/photo-1750440982726-d723eab666a5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
     },
     price: Number,
@@ -30,7 +28,11 @@ const listingSchema = new Schema({
     owner: {
         type: Schema.Types.ObjectId,
         ref: "User"
-    }
+    },
+    // category: {
+    //     type: String,
+    //     enum: ["mountains", "arctic", "camping", "farms", "rooms", "iconic_cities", "castles", "amazing_pools"]
+    // }
 });
 
 listingSchema.post("findOneAndDelete", async(listing)=>{
